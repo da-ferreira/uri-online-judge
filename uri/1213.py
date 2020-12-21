@@ -2,7 +2,15 @@
 while True:
     try:
         numero = int(input())
-        um = 1
+        multiplo = 1
+        quantidade = 1
 
-    except:
+        while multiplo % numero != 0:
+            multiplo = (10 * multiplo + 1) % numero
+            quantidade += 1
+        
+        print(quantidade)
+             
+    except EOFError:
         break
+
